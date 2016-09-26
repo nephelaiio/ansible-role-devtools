@@ -1,0 +1,16 @@
+---
+# User variables for role
+devtools_packages:
+  - autoconf
+  - automake
+  - binutils
+  - bison
+  - flex
+  - gcc
+  - gcc-c++
+  - gettext
+  - libtool
+  - make
+  - m4
+  - patch
+devtools_packages_state: present

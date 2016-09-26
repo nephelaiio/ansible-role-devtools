@@ -1,0 +1,5 @@
+---
+# Variable overrides and definitions for Arch and derivatives
+devtools_packages:
+  - base-devel
+devtools_packages_state: present

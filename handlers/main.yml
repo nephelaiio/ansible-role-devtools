@@ -1,0 +1,7 @@
+---
+# handlers file for devtools
+- name: restart devtools services
+  service:
+    name=devtools_service_name
+    state=restarted
+  become: yes
