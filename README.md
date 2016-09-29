@@ -27,7 +27,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: devtools devtools_packages: devtools }
+         - { role: devtools devtools_packages: build-essential }
 
 
 Testing
