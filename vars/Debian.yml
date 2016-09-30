@@ -2,4 +2,5 @@
 # Variable definitions and overrides for Debian
 devtools_packages:
   - build-essential
+  - m4
 devtools_packages_state: present
