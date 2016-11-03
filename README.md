@@ -5,11 +5,6 @@ nephelaiio.devtools
 
 An [ansible role](https://galaxy.ansible.com/nephelaiio/devtools) to install and configure devtools
 
-Requirements
-------------
-
-Please make sure your environment has [docker](https://www.docker.com) installed in order to run role validation tests. Additional python dependencies are listed in the [requirements file](/requirements.txt)
-
 Role Variables
 --------------
 
@@ -23,15 +18,15 @@ By default this role does not depend on any external roles. If any such dependen
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: devtools devtools_packages: build-essential }
+- hosts: servers
+  roles:
+     - { role: devtools, devtools_packages_state: latest }
 
 
 Testing
 -------
+
+Please make sure your environment has [docker](https://www.docker.com) installed in order to run role validation tests. Additional python dependencies are listed in the [requirements file](/requirements.txt)
 
 Role is tested against the following distributions (docker images):
   * Ubuntu Xenial
