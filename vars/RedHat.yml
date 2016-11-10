@@ -20,5 +20,4 @@ devtools_packages:
   - python-devel
   - libffi-devel
   - openssl-devel
-
 devtools_packages_state: present
