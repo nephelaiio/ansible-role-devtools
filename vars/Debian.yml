@@ -3,4 +3,6 @@
 devtools_packages:
   - build-essential
   - m4
-devtools_packages_state: present
+  - libffi-dev
+  - python-dev
+  - libssl-dev

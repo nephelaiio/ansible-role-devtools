@@ -2,4 +2,8 @@
 # Variable overrides and definitions for Arch and derivatives
 devtools_packages:
   - base-devel
+  - python
+  - python3
+  - openssl
+  - libffi
 devtools_packages_state: present

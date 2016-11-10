@@ -17,4 +17,8 @@ devtools_packages:
   - rpm-build
   - rpm-sign
   - m4
+  - python-devel
+  - libffi-devel
+  - openssl-devel
+
 devtools_packages_state: present

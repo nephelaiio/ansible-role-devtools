@@ -1,2 +1,17 @@
 ---
-# Variable definitions and overrides for Ubuntu
+devtools_packages:
+  - autoconf
+  - automake
+  - binutils
+  - bison
+  - flex
+  - gcc
+  - gcc-c++
+  - gettext
+  - libtool
+  - make
+  - m4
+  - patch
+  - libffi-dev
+  - python-dev
+  - libssl-dev
