@@ -13,9 +13,9 @@
 
 # Install packages
 - name: install devtools packages
-  package: >
-    name="{{ devtools_packages }}"
-    state="{{ devtools_packages_state }}"
+  package:
+    name: "{{ devtools_packages }}"
+    state: "{{ devtools_packages_state }}"
   become: yes
   tags:
     - devtools
