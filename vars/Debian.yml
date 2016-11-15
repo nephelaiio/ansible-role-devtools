@@ -1,8 +1,8 @@
 ---
-# Variable definitions and overrides for Debian
 devtools_packages:
   - build-essential
   - m4
   - libffi-dev
   - python-dev
   - libssl-dev
+devtools_packages_state: present

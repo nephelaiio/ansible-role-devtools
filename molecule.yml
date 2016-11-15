@@ -30,5 +30,15 @@ docker:
 ansible:
   requirements_file: dependencies.yml
 
+molecule:
+  test:
+    sequence:
+      - destroy
+      - syntax
+      - create
+      - converge
+      - verify
+      - destroy
+
 verifier:
   name: testinfra
