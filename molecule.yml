@@ -27,8 +27,9 @@ docker:
         ansible_groups:
           - test
 
-ansible:
-  requirements_file: dependencies.yml
+dependency:
+    requirements_file: dependencies.yml
+    name: galaxy
 
 molecule:
   test:
