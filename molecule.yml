@@ -1,35 +1,36 @@
+# vim: ts=2 sw=2 et :
 ---
 driver:
   name: docker
 
 docker:
   containers:
-      - name: ansible-devtools-jessie
-        image: debian
-        image_version: jessie
-        ansible_groups:
-          - test
-      - name: ansible-devtools-xenial
-        image: ubuntu
-        image_version: xenial
-        ansible_groups:
-          - test
-      - name: ansible-devtools-centos7
-        image: centos
-        image_version: 7
-        ansible_groups:
-          - test
-      - name: ansible-devtools-arch
-        image: pritunl/archlinux
-        image_version: latest
-        dockerfile: docker/arch.dockerfile
-        command: /bin/bash
-        ansible_groups:
-          - test
+    - name: ansible-devtools-jessie
+      image: debian
+      image_version: jessie
+      ansible_groups:
+        - test
+    - name: ansible-devtools-xenial
+      image: ubuntu
+      image_version: xenial
+      ansible_groups:
+        - test
+    - name: ansible-devtools-centos7
+      image: centos
+      image_version: 7
+      ansible_groups:
+        - test
+    - name: ansible-devtools-arch
+      image: pritunl/archlinux
+      image_version: latest
+      dockerfile: docker/arch.dockerfile
+      command: /bin/bash
+      ansible_groups:
+        - test
 
 dependency:
-    requirements_file: dependencies.yml
-    name: galaxy
+  requirements_file: dependencies.yml
+  name: galaxy
 
 molecule:
   test:
@@ -43,3 +44,5 @@ molecule:
 
 verifier:
   name: testinfra
+  options:
+    ignore: roles
