@@ -17,5 +17,17 @@
     name: "{{ devtools_packages }}"
     state: "{{ devtools_packages_state }}"
   become: yes
+  when: ansible_os_family != 'Archlinux'
+  tags:
+    - devtools
+
+# Install packages
+- name: install devtools packages
+  package:
+    name: "{{ devtools_packages }}"
+    state: "{{ devtools_packages_state }}"
+  become: yes
+  changed_when: false
+  when: ansible_os_family == 'Archlinux'
   tags:
     - devtools
