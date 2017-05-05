@@ -22,12 +22,14 @@
     - devtools
 
 # Install packages
-- name: install devtools packages
-  package:
-    name: "{{ devtools_packages }}"
+- name: install devtools packages for Archlinux
+  pacman:
+    name: "{{ item }}"
     state: "{{ devtools_packages_state }}"
   become: yes
   changed_when: false
+  with_items:
+    - "{{ devtools_packages }}"
   when: ansible_os_family == 'Archlinux'
   tags:
     - devtools
