@@ -21,8 +21,8 @@ docker:
       ansible_groups:
         - test
     - name: ansible-devtools-arch
-      image: base/archlinux
       image_version: latest
+      image: archlinux
       dockerfile: docker/arch.dockerfile
       command: /bin/bash
       ansible_groups:
