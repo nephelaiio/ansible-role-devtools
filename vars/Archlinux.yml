@@ -3,7 +3,6 @@
 devtools_packages:
   - base-devel
   - python
-  - python3
   - openssl
   - libffi
 devtools_packages_state: present
