@@ -11,9 +11,11 @@ Please refer to the [defaults file](/defaults/main.yml) for an up to date list o
 
 ## Example Playbook
 
+```
 - hosts: servers
   roles:
      - role: devtools
+```
 
 ## Testing
 
@@ -25,7 +27,7 @@ Role is tested against the following distributions (docker images):
   * Debian Stretch
   * Arch Linux
 
-You can test the role from sources using the command line using molecule directly ` molecule test `
+You can test the role from sources using the command line by calling molecule directly ` molecule test `
 
 ## License
 
