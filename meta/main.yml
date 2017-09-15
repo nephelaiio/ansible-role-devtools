@@ -21,4 +21,5 @@ galaxy_info:
     - devtools
 
 dependencies:
-  - { role: nephelaiio.git }
+  - role: nephelaiio.git
+    version: 1.0.0
