@@ -7,8 +7,6 @@
         - "vars/{{ ansible_distrubition }}.yml"
         - "vars/{{ ansible_os_family }}.yml"
       skip: true
-  tags:
-    - devtools
 
 - name: install devtools packages
   package:
@@ -16,10 +14,7 @@
     state: "{{ devtools_packages_state }}"
   become: yes
   when: ansible_os_family != 'Archlinux'
-  tags:
-    - devtools
 
-# Install packages
 - name: install devtools packages for Archlinux
   pacman:
     name: "{{ item }}"
@@ -29,5 +24,3 @@
   with_items:
     - "{{ devtools_packages }}"
   when: ansible_os_family == 'Archlinux'
-  tags:
-    - devtools
