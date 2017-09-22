@@ -8,19 +8,28 @@
         - "vars/{{ ansible_os_family }}.yml"
       skip: true
 
-- name: install devtools packages
-  package:
+- name: install apt packages
+  apt:
     name: "{{ devtools_packages }}"
     state: "{{ devtools_packages_state }}"
+    update_cache: yes
   become: yes
-  when: ansible_os_family != 'Archlinux'
+  when: ansible_os_family == 'Debian'
 
-- name: install devtools packages for Archlinux
+- name: install yum packages
+  yum:
+    name: "{{ devtools_packages }}"
+    state: "{{ devtools_packages_state }}"
+    update_cache: yes
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: install pacman packages
   pacman:
     name: "{{ item }}"
     state: "{{ devtools_packages_state }}"
+    update_cache: yes
   become: yes
-  changed_when: false
   with_items:
     - "{{ devtools_packages }}"
   when: ansible_os_family == 'Archlinux'
