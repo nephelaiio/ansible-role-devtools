@@ -1,7 +1,7 @@
 # nephelaiio.devtools
 
 [![Build Status](https://travis-ci.org/nephelaiio/ansible-role-devtools.svg?branch=master)](https://travis-ci.org/nephelaiio/ansible-role-devtools)
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-systemd--service-blue.svg)](https://galaxy.ansible.com/nephelaiio/devtools/)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-nephelaiio.devtools-blue.svg)](https://galaxy.ansible.com/nephelaiio/devtools/)
 
 An [ansible role](https://galaxy.ansible.com/nephelaiio/devtools) to install and configure devtools
 
