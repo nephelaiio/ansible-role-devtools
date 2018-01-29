@@ -10,7 +10,7 @@
 
 - name: install apt packages
   apt:
-    name: "{{ devtools_packages | default('devtools_packages_default') }}"
+    name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
     update_cache: yes
   become: yes
@@ -18,7 +18,7 @@
 
 - name: install yum packages
   yum:
-    name: "{{ devtools_packages | default('devtools_packages_default') }}"
+    name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
     update_cache: yes
   become: yes
@@ -31,5 +31,5 @@
     update_cache: yes
   become: yes
   with_items:
-    - "{{ devtools_packages | default('devtools_packages_default') }}"
+    - "{{ devtools_packages | default(devtools_packages_default) }}"
   when: ansible_os_family == 'Archlinux'
