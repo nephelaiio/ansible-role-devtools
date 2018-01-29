@@ -1,6 +1,5 @@
 ---
-# Variable overrides and definitions for Arch and derivatives
-devtools_packages:
+devtools_packages_default:
   - base-devel
   - python
   - openssl

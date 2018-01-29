@@ -1,6 +1,5 @@
 ---
-# Variable overrides and definitions for RedHat variants
-devtools_packages:
+devtools_packages_default:
   - autoconf
   - automake
   - binutils

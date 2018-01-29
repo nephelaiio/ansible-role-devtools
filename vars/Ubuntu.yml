@@ -1,12 +1,12 @@
 ---
-devtools_packages:
+devtools_packages_default:
   - autoconf
   - automake
   - binutils
   - bison
   - flex
   - gcc
-  - gcc-c++
+  - g++
   - gettext
   - libtool
   - make

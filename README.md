@@ -7,6 +7,17 @@ An [ansible role](https://galaxy.ansible.com/nephelaiio/devtools) to install and
 
 ## Role Variables
 
+```
+devtools_packages:
+  - build-essential
+```
+The list of packages to manage
+
+```
+devtools_packages_state:
+```
+The desired package state (i.e present/absent/latest)
+
 Please refer to the [defaults file](/defaults/main.yml) for an up to date list of input parameters.
 
 ## Example Playbook
