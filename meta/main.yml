@@ -1,6 +1,7 @@
 ---
 galaxy_info:
-  author: Ted Cook
+  author: nephelaiio
+  role_name: devtools
   description: An Ansible role to install and configure base development tools
   license: MIT
   min_ansible_version: 2.2
