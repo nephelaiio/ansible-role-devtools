@@ -1,6 +1,6 @@
 ---
-- name: include variable overrides
-  include_vars: "{{ item }}"
+- name: Include variable overrides
+  ansible.builtin.include_vars: "{{ item }}"
   vars:
     include_files:
       - "vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
@@ -8,26 +8,26 @@
       - "vars/{{ ansible_os_family }}.yml"
   loop: "{{ q('first_found', include_files, errors='ignore') }}"
 
-- name: install apt packages
-  apt:
+- name: Install apt packages
+  ansible.builtin.apt:
     name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
   when: ansible_os_family == 'Debian'
 
-- name: install yum packages
-  yum:
+- name: Install yum packages
+  ansible.builtin.yum:
     name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
   when: ansible_os_family == 'RedHat'
 
-- name: install pacman packages
-  pacman:
+- name: Install pacman packages
+  community.general.packaging.os.pacman:
     name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
   when: ansible_os_family == 'Archlinux'
