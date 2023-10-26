@@ -14,7 +14,7 @@ install:
 	@type poetry >/dev/null || pip3 install poetry
 	@poetry install
 
-lint: install dependency
+lint: install
 	poetry run yamllint .
 	poetry run ansible-lint .
 	poetry run molecule syntax
