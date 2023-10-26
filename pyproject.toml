@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "nephelaiio.devtools"
+version = "0.1.0"
+description = ""
+authors = ["nephelaiio"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+yamllint = "^1.32.0"
+ansible = "^8.5.0"
+molecule-docker = "^2.1.0"
+molecule = "^6.0.2"
+ansible-lint = { version = "^6.20.3", markers = "platform_system != 'Windows'" }
+
+[tool.poetry.group.dev.dependencies]
+netaddr = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
