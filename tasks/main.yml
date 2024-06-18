@@ -23,6 +23,7 @@
     update_cache: true
   become: true
   when: ansible_os_family == 'RedHat'
+  tags: skip_ansible_lint
 
 - name: Install pacman packages
   community.general.packaging.os.pacman:
