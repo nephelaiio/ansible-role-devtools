@@ -1,24 +1,23 @@
 ---
 galaxy_info:
-  standalone: true
-  author: nephelaiio
   role_name: devtools
+  author: nephelaiio
   description: An Ansible role to install and configure base development tools
   license: MIT
   min_ansible_version: '2.2'
   platforms:
     - name: EL
       versions:
-        - all
-    - name: Archlinux
+        - 'all'
+    - name: ArchLinux
       versions:
-        - all
+        - 'all'
     - name: Ubuntu
       versions:
-        - all
+        - 'all'
     - name: Debian
       versions:
-        - all
+        - 'all'
   galaxy_tags:
     - devtools
 

@@ -23,9 +23,10 @@
     update_cache: true
   become: true
   when: ansible_os_family == 'RedHat'
+  tags: skip_ansible_lint
 
 - name: Install pacman packages
-  community.general.packaging.os.pacman:
+  community.general.pacman:
     name: "{{ devtools_packages | default(devtools_packages_default) }}"
     state: "{{ devtools_packages_state | default('present') }}"
     update_cache: true
