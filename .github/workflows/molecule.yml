@@ -25,11 +25,17 @@ jobs:
         scenario:
           - name: default
         image:
+          - name: ubuntu2404
+            command: /lib/systemd/systemd
           - name: ubuntu2204
             command: /lib/systemd/systemd
           - name: ubuntu2004
             command: /lib/systemd/systemd
+          - name: debian12
+            command: /lib/systemd/systemd
           - name: debian11
+            command: /lib/systemd/systemd
+          - name: rockylinux9
             command: /lib/systemd/systemd
     steps:
       - name: Check out the codebase
