@@ -1,5 +1,6 @@
 ---
 devtools_packages_default:
+  - git
   - base-devel
   - python
   - openssl
