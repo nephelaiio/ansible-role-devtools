@@ -1,5 +1,6 @@
 ---
 devtools_packages_default:
+  - git
   - autoconf
   - automake
   - binutils
@@ -13,6 +14,6 @@ devtools_packages_default:
   - m4
   - patch
   - libffi-dev
-  - python3-dev
+  - python-dev
   - libssl-dev
 devtools_packages_state: present
