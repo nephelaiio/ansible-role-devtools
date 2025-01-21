@@ -2,7 +2,6 @@
 name: molecule
 
 on:
-
   pull_request:
     branches:
       - master
@@ -10,14 +9,11 @@ on:
     - cron: "0 5 * * 5"
 
 defaults:
-
   run:
-    working-directory: 'nephelaiio.devtools'
+    working-directory: "nephelaiio.devtools"
 
 jobs:
-
   molecule:
-
     name: molecule
     runs-on: ubuntu-latest
     strategy:
@@ -41,12 +37,12 @@ jobs:
       - name: Check out the codebase
         uses: actions/checkout@v4
         with:
-          path: 'nephelaiio.devtools'
+          path: "nephelaiio.devtools"
 
       - name: Set up python 3
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Update ubuntu repositories
         run: sudo apt-get update
@@ -63,8 +59,8 @@ jobs:
       - name: Run molecule tests.
         run: make test
         env:
-          PY_COLORS: '1'
-          ANSIBLE_FORCE_COLOR: '1'
+          PY_COLORS: "1"
+          ANSIBLE_FORCE_COLOR: "1"
           MOLECULE_DOCKER_IMAGE: ${{ matrix.image.name }}
           MOLECULE_DOCKER_COMMAND: ${{ matrix.image.command }}
           MOLECULE_SCENARIO: ${{ matrix.scenario.name }}
