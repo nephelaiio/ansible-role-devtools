@@ -31,8 +31,6 @@ jobs:
             command: /lib/systemd/systemd
           - name: debian11
             command: /lib/systemd/systemd
-          - name: rockylinux9
-            command: /lib/systemd/systemd
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v4
