@@ -3,11 +3,12 @@ name = "nephelaiio.devtools"
 version = "0.1.0"
 description = ""
 authors = ["nephelaiio"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 ansible-lint = { version = "^24.6.0", markers = "platform_system != 'Windows'" }
 ansible = "^10.1.0"
 molecule = "^24.6.0"
