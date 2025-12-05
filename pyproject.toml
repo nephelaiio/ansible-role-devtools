@@ -10,7 +10,7 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 ansible-lint = { version = "^24.6.0", markers = "platform_system != 'Windows'" }
-ansible = "^10.1.0"
+ansible = "^12.0.0"
 molecule = "^24.6.0"
 molecule-plugins = "^23.5.3"
 yamllint = "^1.35.1"
