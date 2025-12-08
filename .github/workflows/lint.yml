@@ -1,0 +1,10 @@
+---
+name: lint
+permissions:
+  contents: read
+on:
+  pull_request:
+    branches: ["main", "master"]
+jobs:
+  lint:
+    uses: pokerops/ansible-utils/.github/workflows/lint.yml@master
