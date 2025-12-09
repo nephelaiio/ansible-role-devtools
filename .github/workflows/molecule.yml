@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - master
-defaults:
-  run:
-    working-directory: "nephelaiio.devtools"
 jobs:
   molecule:
     name: molecule
